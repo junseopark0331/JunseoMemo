@@ -11,7 +11,6 @@
 		78348B26289BA6120089C1F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78348B25289BA6120089C1F8 /* SceneDelegate.swift */; };
 		78348B28289BA6120089C1F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78348B27289BA6120089C1F8 /* ViewController.swift */; };
 		78348B2B289BA6120089C1F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78348B29289BA6120089C1F8 /* Main.storyboard */; };
-		78348B2E289BA6120089C1F8 /* JunseoMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78348B2C289BA6120089C1F8 /* JunseoMemo.xcdatamodeld */; };
 		78348B30289BA6120089C1F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78348B2F289BA6120089C1F8 /* Assets.xcassets */; };
 		78348B33289BA6120089C1F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78348B31289BA6120089C1F8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -22,7 +21,6 @@
 		78348B25289BA6120089C1F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		78348B27289BA6120089C1F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		78348B2A289BA6120089C1F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		78348B2D289BA6120089C1F8 /* JunseoMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JunseoMemo.xcdatamodel; sourceTree = "<group>"; };
 		78348B2F289BA6120089C1F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78348B32289BA6120089C1F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78348B34289BA6120089C1F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				78348B2F289BA6120089C1F8 /* Assets.xcassets */,
 				78348B31289BA6120089C1F8 /* LaunchScreen.storyboard */,
 				78348B34289BA6120089C1F8 /* Info.plist */,
-				78348B2C289BA6120089C1F8 /* JunseoMemo.xcdatamodeld */,
 			);
 			path = JunseoMemo;
 			sourceTree = "<group>";
@@ -142,7 +139,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				78348B28289BA6120089C1F8 /* ViewController.swift in Sources */,
-				78348B2E289BA6120089C1F8 /* JunseoMemo.xcdatamodeld in Sources */,
 				78348B24289BA6120089C1F8 /* AppDelegate.swift in Sources */,
 				78348B26289BA6120089C1F8 /* SceneDelegate.swift in Sources */,
 			);
@@ -299,6 +295,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,6 +324,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,19 +360,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		78348B2C289BA6120089C1F8 /* JunseoMemo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				78348B2D289BA6120089C1F8 /* JunseoMemo.xcdatamodel */,
-			);
-			currentVersion = 78348B2D289BA6120089C1F8 /* JunseoMemo.xcdatamodel */;
-			path = JunseoMemo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 78348B18289BA6120089C1F8 /* Project object */;
 }
