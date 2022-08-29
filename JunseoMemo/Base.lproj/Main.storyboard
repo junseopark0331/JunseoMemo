@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,12 +49,55 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="JunseoMemo" id="4JA-U7-wxw">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oz4-LR-IUr"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oz4-LR-IUr">
+                            <connections>
+                                <segue destination="VCB-FL-Fbi" kind="presentation" id="eiq-S5-2t0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noa-jc-5mF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="517" y="110"/>
+        </scene>
+        <!--새 메모-->
+        <scene sceneID="JoP-W6-e9d">
+            <objects>
+                <viewController id="ZZo-c2-0ah" customClass="ComposeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iei-83-LWv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DgW-aP-61f">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="830"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ga2-fI-AQM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DgW-aP-61f" firstAttribute="trailing" secondItem="Ga2-fI-AQM" secondAttribute="trailing" id="9ZA-qY-Rut"/>
+                            <constraint firstItem="DgW-aP-61f" firstAttribute="top" secondItem="Iei-83-LWv" secondAttribute="top" id="J3r-n3-SFE"/>
+                            <constraint firstItem="Ga2-fI-AQM" firstAttribute="bottom" secondItem="DgW-aP-61f" secondAttribute="bottom" constant="12" id="KHz-Zn-Jkv"/>
+                            <constraint firstItem="DgW-aP-61f" firstAttribute="leading" secondItem="Ga2-fI-AQM" secondAttribute="leading" id="RgL-zZ-XJu"/>
+                            <constraint firstItem="DgW-aP-61f" firstAttribute="trailing" secondItem="Ga2-fI-AQM" secondAttribute="trailing" id="X6u-Dc-gxL"/>
+                            <constraint firstItem="DgW-aP-61f" firstAttribute="top" secondItem="Iei-83-LWv" secondAttribute="top" id="a4h-r9-8nH"/>
+                            <constraint firstItem="DgW-aP-61f" firstAttribute="leading" secondItem="Ga2-fI-AQM" secondAttribute="leading" id="g3E-rv-E4y"/>
+                            <constraint firstItem="Ga2-fI-AQM" firstAttribute="bottom" secondItem="DgW-aP-61f" secondAttribute="bottom" constant="12" id="tBU-0k-8m3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="새 메모" id="6xI-bq-Rir">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="OML-21-ruH"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="zz7-t7-I73"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7A-8S-weZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2098.5507246376815" y="-524.33035714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VzY-5T-HM9">
@@ -71,8 +115,29 @@
             </objects>
             <point key="canvasLocation" x="-373" y="110"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0VU-Kd-bO0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VCB-FL-Fbi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uuc-b2-oTI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZZo-c2-0ah" kind="relationship" relationship="rootViewController" id="j1U-jU-z7e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTE-Mb-IdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1299" y="-524"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
