@@ -63,7 +63,7 @@
         <!--새 메모-->
         <scene sceneID="JoP-W6-e9d">
             <objects>
-                <viewController id="ZZo-c2-0ah" customClass="ComposeViewController" sceneMemberID="viewController">
+                <viewController id="ZZo-c2-0ah" customClass="ComposeViewController" customModule="JunseoMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iei-83-LWv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="새 메모" id="6xI-bq-Rir">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="OML-21-ruH"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="OML-21-ruH">
+                            <connections>
+                                <action selector="exitButtonDidTap:" destination="ZZo-c2-0ah" id="5SH-MD-G4x"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="zz7-t7-I73"/>
                     </navigationItem>
                 </viewController>

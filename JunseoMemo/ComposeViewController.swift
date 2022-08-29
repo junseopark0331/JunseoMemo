@@ -9,10 +9,16 @@ import UIKit
 
 class ComposeViewController: UIViewController {
 
+    
+    @IBAction func exitButtonDidTap(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
 
