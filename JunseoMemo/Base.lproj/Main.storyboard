@@ -96,8 +96,15 @@
                                 <action selector="exitButtonDidTap:" destination="ZZo-c2-0ah" id="5SH-MD-G4x"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="zz7-t7-I73"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="zz7-t7-I73">
+                            <connections>
+                                <action selector="save:" destination="ZZo-c2-0ah" id="sIQ-hv-J9C"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="memoTextView" destination="DgW-aP-61f" id="apt-T0-cpK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7A-8S-weZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
