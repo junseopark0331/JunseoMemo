@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="3jW-Pa-EvQ" detailTextLabel="OjX-ds-3QV" style="IBUITableViewCellStyleSubtitle" id="plb-96-iSh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="3jW-Pa-EvQ" detailTextLabel="OjX-ds-3QV" style="IBUITableViewCellStyleSubtitle" id="plb-96-iSh">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="plb-96-iSh" id="dN8-jk-JpO">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3jW-Pa-EvQ">
@@ -41,6 +41,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="2Pq-ex-t0j" kind="push" id="Miw-yr-ba9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -51,14 +54,52 @@
                     <navigationItem key="navigationItem" title="JunseoMemo" id="4JA-U7-wxw">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="oz4-LR-IUr">
                             <connections>
-                                <segue destination="VCB-FL-Fbi" kind="presentation" id="eiq-S5-2t0"/>
+                                <segue destination="VCB-FL-Fbi" kind="presentation" id="Kj0-O3-ZQo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noa-jc-5mF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="517" y="110"/>
+            <point key="canvasLocation" x="465" y="110"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="pOf-eh-qEy">
+            <objects>
+                <viewController id="2Pq-ex-t0j" customClass="DetailViewController" customModule="JunseoMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dbs-rE-8ub">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PCn-BB-6cV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxy-EI-0SF">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Item" id="1TJ-WR-Ra4"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d2b-Qb-Qmk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PCn-BB-6cV" firstAttribute="trailing" secondItem="d2b-Qb-Qmk" secondAttribute="trailing" id="87Z-cW-Bgk"/>
+                            <constraint firstItem="PCn-BB-6cV" firstAttribute="leading" secondItem="d2b-Qb-Qmk" secondAttribute="leading" id="8al-FZ-B91"/>
+                            <constraint firstItem="vxy-EI-0SF" firstAttribute="top" secondItem="PCn-BB-6cV" secondAttribute="bottom" id="P1F-Hr-FTO"/>
+                            <constraint firstItem="vxy-EI-0SF" firstAttribute="bottom" secondItem="d2b-Qb-Qmk" secondAttribute="bottom" id="TtO-60-D1v"/>
+                            <constraint firstItem="PCn-BB-6cV" firstAttribute="leading" secondItem="dbs-rE-8ub" secondAttribute="leading" id="ngU-Zk-paq"/>
+                            <constraint firstItem="vxy-EI-0SF" firstAttribute="leading" secondItem="d2b-Qb-Qmk" secondAttribute="leading" id="sQU-i5-IRu"/>
+                            <constraint firstItem="PCn-BB-6cV" firstAttribute="top" secondItem="dbs-rE-8ub" secondAttribute="top" id="tjr-Ju-93g"/>
+                            <constraint firstItem="vxy-EI-0SF" firstAttribute="trailing" secondItem="d2b-Qb-Qmk" secondAttribute="trailing" id="vkl-d1-sAu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="qD6-oB-0aE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAu-OB-MGQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1314.4927536231885" y="109.82142857142857"/>
         </scene>
         <!--새 메모-->
         <scene sceneID="JoP-W6-e9d">
@@ -108,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7A-8S-weZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2098.5507246376815" y="-524.33035714285711"/>
+            <point key="canvasLocation" x="2084" y="-629"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VzY-5T-HM9">
@@ -142,7 +183,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTE-Mb-IdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1299" y="-524"/>
+            <point key="canvasLocation" x="1284" y="-629"/>
         </scene>
     </scenes>
     <resources>
