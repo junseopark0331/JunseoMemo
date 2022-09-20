@@ -8,6 +8,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    @IBOutlet weak var memoTableView: UITableView!
     
     
     var memo: Memo? //이전화면에서 전달할 메모를 저장할 속성
@@ -20,9 +21,26 @@ class DetailViewController: UIViewController {
         return f
     }()
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination.children.first as?
+            ComposeViewController{
+            vc.editTarget = memo
+        }
+    }
+    var token: NSObjectProtocol?
+    
+    deinit{
+        if let token = token{
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        token = NotificationCenter.default.addObserver(forName: ComposeViewController.memoDidChange,
+            object: nil, queue: OperationQueue.main, using: { [weak self](noti) in
+            self?.memoTableView.reloadData()
+        })
        
     }
     
