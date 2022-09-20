@@ -13,6 +13,8 @@
 		78348B30289BA6120089C1F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78348B2F289BA6120089C1F8 /* Assets.xcassets */; };
 		78348B33289BA6120089C1F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78348B31289BA6120089C1F8 /* LaunchScreen.storyboard */; };
 		7860DA7C28C789C8001747EA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860DA7B28C789C8001747EA /* DetailViewController.swift */; };
+		786F732D28D7076C006A8FA3 /* JunseoMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 786F732B28D7076C006A8FA3 /* JunseoMemo.xcdatamodeld */; };
+		786F733228D70977006A8FA3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F733128D70977006A8FA3 /* DataManager.swift */; };
 		788ECDE128BCF5D4006B2B28 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788ECDE028BCF5D4006B2B28 /* ComposeViewController.swift */; };
 		788ECDE328BCFD4C006B2B28 /* UIViewcontroller+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788ECDE228BCFD4C006B2B28 /* UIViewcontroller+Alert.swift */; };
 		78FA72FC28B51B80004401EE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA72FB28B51B80004401EE /* Model.swift */; };
@@ -28,6 +30,8 @@
 		78348B32289BA6120089C1F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78348B34289BA6120089C1F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7860DA7B28C789C8001747EA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		786F732C28D7076C006A8FA3 /* JunseoMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JunseoMemo.xcdatamodel; sourceTree = "<group>"; };
+		786F733128D70977006A8FA3 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		788ECDE028BCF5D4006B2B28 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		788ECDE228BCFD4C006B2B28 /* UIViewcontroller+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewcontroller+Alert.swift"; path = "Model/UIViewcontroller+Alert.swift"; sourceTree = "<group>"; };
 		78FA72FB28B51B80004401EE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 		78348B22289BA6120089C1F8 /* JunseoMemo */ = {
 			isa = PBXGroup;
 			children = (
+				786F733028D7095D006A8FA3 /* Data */,
 				78FA72FA28B51B4D004401EE /* Model */,
 				78348B23289BA6120089C1F8 /* AppDelegate.swift */,
 				78348B25289BA6120089C1F8 /* SceneDelegate.swift */,
@@ -71,12 +76,21 @@
 				78348B2F289BA6120089C1F8 /* Assets.xcassets */,
 				78348B31289BA6120089C1F8 /* LaunchScreen.storyboard */,
 				78348B34289BA6120089C1F8 /* Info.plist */,
+				786F732B28D7076C006A8FA3 /* JunseoMemo.xcdatamodeld */,
 				78FA72FD28B7B5EE004401EE /* MemoListTableViewController.swift */,
 				788ECDE028BCF5D4006B2B28 /* ComposeViewController.swift */,
 				788ECDE228BCFD4C006B2B28 /* UIViewcontroller+Alert.swift */,
 				7860DA7B28C789C8001747EA /* DetailViewController.swift */,
 			);
 			path = JunseoMemo;
+			sourceTree = "<group>";
+		};
+		786F733028D7095D006A8FA3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				786F733128D70977006A8FA3 /* DataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		78FA72FA28B51B4D004401EE /* Model */ = {
@@ -159,11 +173,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				788ECDE128BCF5D4006B2B28 /* ComposeViewController.swift in Sources */,
+				786F732D28D7076C006A8FA3 /* JunseoMemo.xcdatamodeld in Sources */,
 				788ECDE328BCFD4C006B2B28 /* UIViewcontroller+Alert.swift in Sources */,
 				78FA72FC28B51B80004401EE /* Model.swift in Sources */,
 				78348B24289BA6120089C1F8 /* AppDelegate.swift in Sources */,
 				78348B26289BA6120089C1F8 /* SceneDelegate.swift in Sources */,
 				78FA72FE28B7B5EE004401EE /* MemoListTableViewController.swift in Sources */,
+				786F733228D70977006A8FA3 /* DataManager.swift in Sources */,
 				7860DA7C28C789C8001747EA /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +400,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		786F732B28D7076C006A8FA3 /* JunseoMemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				786F732C28D7076C006A8FA3 /* JunseoMemo.xcdatamodel */,
+			);
+			currentVersion = 786F732C28D7076C006A8FA3 /* JunseoMemo.xcdatamodel */;
+			path = JunseoMemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 78348B18289BA6120089C1F8 /* Project object */;
 }
