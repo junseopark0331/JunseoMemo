@@ -25,7 +25,7 @@ class DataManager {
 
         let sortByDateDesc = NSSortDescriptor(key: "insertDate", ascending: false)
         request.sortDescriptors = [sortByDateDesc]
-
+        
         do {
             memoList = try mainContenxt.fetch(request)
         } catch {
@@ -33,7 +33,7 @@ class DataManager {
         }
     }
 
-    func addNewMemo( memo: String?) {
+    func addNewMemo(memo: String?) {
         let newMemo = Memo(context: mainContenxt)
         newMemo.content = memo
         newMemo.insertDate = Date()
@@ -50,13 +50,6 @@ class DataManager {
         }
     }
 
-    func addNewMemo(_ memo: String?){
-        let newMemo = Memo(context: mainContenxt)
-        newMemo.content = memo
-        newMemo.insertDate = Date()
-        
-    }
-    
 
     lazy var persistentContainer: NSPersistentContainer = {
 
@@ -64,7 +57,7 @@ class DataManager {
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
 
-                fatalError("Unresolved error (error), (error.userInfo)")
+                fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
         return container
@@ -73,13 +66,13 @@ class DataManager {
     // MARK: - Core Data Saving support
 
     func saveContext () {
-        let context = persistentContainer.viewContext
+        let context = mainContenxt
         if context.hasChanges {
             do {
                 try context.save()
             } catch {
                 let nserror = error as NSError
-                fatalError("Unresolved error (nserror), (nserror.userInfo)")
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }
